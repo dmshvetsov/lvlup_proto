@@ -26,6 +26,9 @@ module LvlupProto
     # Generators
     config.generators do |g|
       g.factory_girl true
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
     end
   end
 end
