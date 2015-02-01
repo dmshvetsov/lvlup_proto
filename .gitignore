@@ -15,3 +15,9 @@
 /log/*
 !/log/.keep
 /tmp
+
+# VIM swap files
+*.swp
+
+# MAC files
+.DS_Store
