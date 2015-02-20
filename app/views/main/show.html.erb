@@ -1,8 +1,6 @@
 <div class="row">
   <div class="col-xs-12">
-    <% if current_user %>
-      <%= link_to t('facebook_logout'), signout_path %>
-    <% else %>
+    <% unless current_user %>
       <%= link_to t('facebook_login'), '/auth/facebook', id: 'sign_in' %>
     <% end %>
   </div>

@@ -15,7 +15,9 @@
         <span class="label label-default">LvlUp</span>
       </div>
       <div class="col-md-3 profile">
-        name here
+        <% if current_user %>
+          name here | <%= link_to t('facebook_logout'), signout_path %>
+        <% end %>
       </div>
     </div>
     <hr />
