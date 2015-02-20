@@ -4,15 +4,16 @@ RSpec.describe SessionsController, :type => :controller do
 
   describe "GET create" do
     it "returns http success" do
+      pending 'need a auth_hash'
       get :create
-      expect(response).to have_http_status(:success)
+      expect(response).to redirect_to(root_path)
     end
   end
 
   describe "GET destroy" do
     it "returns http success" do
       get :destroy
-      expect(response).to have_http_status(:success)
+      expect(response).to redirect_to(root_path)
     end
   end
 

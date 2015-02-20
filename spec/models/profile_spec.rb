@@ -6,8 +6,8 @@ RSpec.describe Profile, :type => :model do
   describe '.find_or_create_from_auth_hash' do
     subject(:method) { Profile.find_or_create_from_auth_hash }
     context 'when no user with given uid in hash' do
-      pending 'need a auth_hash'
       it 'create new profile record' do
+        pending 'need a auth_hash'
         expect{method}.to change(Profile, :count).by 1
       end
     end
