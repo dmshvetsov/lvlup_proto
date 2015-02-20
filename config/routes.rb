@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'profiles/show/:id', to: 'profiles#show', as: 'profile'
+
   root 'main#show'
 
   get 'auth/facebook/callback', to: 'sessions#create'
