@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
   root 'main#show'
+  get 'lvlups/new'
+  post 'lvlups/create'
   get 'skills/new'
   post 'skills/create'
   get 'skills/show'
