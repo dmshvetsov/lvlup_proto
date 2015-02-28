@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'profiles/show/:id', to: 'profiles#show', as: 'profile'
-
   root 'main#show'
-
+  get 'skills/new'
+  post 'skills/create'
+  get 'skills/show'
+  get 'profiles/show/:id', to: 'profiles#show', as: 'profile'
   get 'auth/facebook/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
