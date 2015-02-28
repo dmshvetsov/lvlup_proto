@@ -6,5 +6,6 @@ class SkillsController < ApplicationController
   end
 
   def show
+    @page_title = 'Skill title here'
   end
 end
