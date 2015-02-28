@@ -27,7 +27,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <% if current_user %>
-                  <a class="navbar-brand" href="/">lvlup / Username here</a>
+                  <a class="navbar-brand" href="/">lvlup / <%= current_user.nickname %></a>
                 <% else %>
                   <a class="navbar-brand" href="/">lvlUp</a>
                 <% end %>
