@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-lg-12">
     <h2>List of skills</h2>
-    <ul>
+    <ul class="list-group">
       <% @profile.skills.each do |skill| %>
-        <li>
+        <li class="list-group-item">
           <%= link_to skill.title, skill_path(skill.title) %>
           <span class="label label-default">0</span>
-          <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-xs' %>
+          <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-sm' %>
         </li>
       <% end %>
     </ul>
