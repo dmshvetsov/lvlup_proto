@@ -11,10 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201115117) do
+ActiveRecord::Schema.define(version: 20150301014339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "characteristics", force: :cascade do |t|
+    t.integer  "skill_id"
+    t.integer  "profile_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "characteristics", ["profile_id"], name: "index_characteristics_on_profile_id", using: :btree
+  add_index "characteristics", ["skill_id"], name: "index_characteristics_on_skill_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.string   "uid"
@@ -27,4 +37,12 @@ ActiveRecord::Schema.define(version: 20150201115117) do
     t.datetime "updated_at",       null: false
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "characteristics", "profiles"
+  add_foreign_key "characteristics", "skills"
 end

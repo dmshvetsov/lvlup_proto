@@ -1,4 +1,6 @@
 class Profile < ActiveRecord::Base
+  has_many :characteristics
+  has_many :skills, through: :characteristics
   def self.find_or_create_from_auth_hash(auth_hash)
     find_or_initialize_by(uid: auth_hash.uid).tap do |user|
       user.uid = auth_hash.uid
