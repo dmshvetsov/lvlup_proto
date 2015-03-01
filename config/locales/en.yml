@@ -22,9 +22,8 @@
 en:
   facebook_login: Login with facebook
   facebook_logout: Logout
-  main: Level up your skills
-  profiles: Profile
-  skills: Skill
-  lvlups: Lvlup
-  new: creation
-  show: page
+  mainshow: Level up your skills
+  profilesshow: Profile
+  skillsshow: Skill
+  skillsnew: Add new skill
+  lvlupsnew: Lvlup

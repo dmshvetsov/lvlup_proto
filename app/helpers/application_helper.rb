@@ -1,5 +1,5 @@
 module ApplicationHelper
   def page_title
-    @page_title || "#{t(params['controller'])} #{t(params['action'])}"
+    @page_title || t(params['controller'] + params['action'])
   end
 end
