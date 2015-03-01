@@ -22,9 +22,6 @@ gem 'omniauth-facebook', '2.0.0'
 # Static pages
 gem 'high_voltage', '2.2.1'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
@@ -39,3 +36,8 @@ group :development, :test do
   gem 'capybara', '2.4.4'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
+ruby "2.1.5"
