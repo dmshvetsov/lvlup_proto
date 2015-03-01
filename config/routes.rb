@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post 'lvlups/create'
   get 'skills/new'
   post 'skills', to: 'skills#create'
-  get 'skills/show'
+  get 'skills/:title', to: 'skills#show', as: 'skill'
   get 'profiles/show/:id', to: 'profiles#show', as: 'profile'
   get 'auth/facebook/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'

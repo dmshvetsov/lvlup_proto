@@ -14,7 +14,8 @@ class SkillsController < ApplicationController
   end
 
   def show
-    @page_title = 'Skill title here'
+    @skill = Skill.find_by_title!(params[:title])
+    @page_title = @skill.title
   end
 
   private

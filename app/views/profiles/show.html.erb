@@ -4,8 +4,8 @@
     <ul>
       <% @profile.skills.each do |skill| %>
         <li>
-          <%= link_to skill.title, skills_show_path(skill) %>
-          <span class="label label-default">80</span>
+          <%= link_to skill.title, skill_path(skill.title) %>
+          <span class="label label-default">0</span>
           <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-xs' %>
         </li>
       <% end %>
