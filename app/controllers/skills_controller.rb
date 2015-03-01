@@ -13,11 +13,6 @@ class SkillsController < ApplicationController
     end
   end
 
-  def show
-    @skill = Skill.find_by_title!(params[:title])
-    @page_title = @skill.title
-  end
-
   private
 
   def permited_params

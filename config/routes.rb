@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
 
   root 'main#show'
+  get 'characteristics/:id', to: 'characteristics#show', as: 'characteristics'
   get 'skills/:skill_title/lvlups/new', to: 'lvlups#new', as: 'lvlups_new'
   post 'skills/:skill_title/lvlups', to: 'lvlups#create', as: 'lvlups'
   get 'skills/new'
   post 'skills', to: 'skills#create'
-  get 'skills/:title', to: 'skills#show', as: 'skill'
   get 'profiles/show/:id', to: 'profiles#show', as: 'profile'
   get 'auth/facebook/callback', to: 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'

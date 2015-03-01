@@ -1,0 +1,13 @@
+<h2>List of lvlups</h2>
+<ul class="list-unstyled">
+  <% @characteristic.lvlups.each_with_index do |lvlup, index| %>
+    <li class="panel panel-default">
+      <div class="panel-heading">
+        <%= index + 1 %> level
+      </div>
+      <div class="panel-body">
+        <%= lvlup.description %>
+      </div>
+    </li>
+  <% end %>
+</ul>
