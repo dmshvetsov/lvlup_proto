@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301014339) do
+ActiveRecord::Schema.define(version: 20150301033356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 20150301014339) do
 
   add_index "characteristics", ["profile_id"], name: "index_characteristics_on_profile_id", using: :btree
   add_index "characteristics", ["skill_id"], name: "index_characteristics_on_skill_id", using: :btree
+
+  create_table "lvlups", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "characteristic_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "lvlups", ["characteristic_id"], name: "index_lvlups_on_characteristic_id", using: :btree
 
   create_table "profiles", force: :cascade do |t|
     t.string   "uid"
@@ -45,4 +54,5 @@ ActiveRecord::Schema.define(version: 20150301014339) do
 
   add_foreign_key "characteristics", "profiles"
   add_foreign_key "characteristics", "skills"
+  add_foreign_key "lvlups", "characteristics"
 end

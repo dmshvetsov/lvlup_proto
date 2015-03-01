@@ -6,7 +6,7 @@
         <li class="list-group-item">
           <%= link_to skill.title, skill_path(skill.title) %>
           <span class="label label-default">0</span>
-          <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-sm' %>
+          <%= link_to 'lvlup', lvlups_new_path(skill_title: skill.title), class: 'btn btn-default btn-sm' %>
         </li>
       <% end %>
     </ul>
