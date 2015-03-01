@@ -4,7 +4,7 @@
     <ul class="list-group">
       <% @profile.characteristics.each do |char| %>
         <li class="list-group-item">
-          <%= link_to char.title, characteristics_path(char) %>
+          <%= char.title %>
           <span class="label label-default"><%= char.lvlups.count %></span>
         </li>
       <% end %>
