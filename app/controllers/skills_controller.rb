@@ -1,4 +1,6 @@
 class SkillsController < ApplicationController
+  before_action :authenticate
+
   def new
     @skill = Skill.new
   end
@@ -9,7 +11,7 @@ class SkillsController < ApplicationController
       render 'new'
     else
       @skill.profiles << current_user
-      redirect_to profile_path(current_user)
+      redirect_to profile_edit_path(current_user)
     end
   end
 

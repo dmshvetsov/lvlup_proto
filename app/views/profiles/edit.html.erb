@@ -6,8 +6,14 @@
         <li class="list-group-item">
           <%= link_to char.title, characteristics_path(char) %>
           <span class="label label-default"><%= char.lvlups.count %></span>
+          <%= link_to 'lvlup', lvlups_new_path(skill_title: char.title), class: 'btn btn-default btn-sm' %>
         </li>
       <% end %>
     </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <%= link_to 'add skill', skills_new_path, class: 'btn btn-default btn-lg' %>
   </div>
 </div>

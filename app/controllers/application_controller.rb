@@ -12,5 +12,9 @@ class ApplicationController < ActionController::Base
     @current_user ||= Profile.find(session[:user_id]) if session[:user_id]
   end
 
+  def authenticate
+    redirect_to root_path unless current_user
+  end
+
   helper_method :current_user
 end

@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
     user = Profile.find_or_create_from_auth_hash(auth_hash)
     self.current_user = user
-    redirect_to root_path
+    redirect_to profile_edit_path(user)
   end
 
   def destroy

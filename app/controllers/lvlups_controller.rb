@@ -1,4 +1,6 @@
 class LvlupsController < ApplicationController
+  before_action :authenticate
+
   def new
     @lvlup = Lvlup.new
     skill = Skill.find_by_title!(params[:skill_title])
@@ -8,7 +10,7 @@ class LvlupsController < ApplicationController
   def create
     @lvlup = Lvlup.new(permited_params)
     if @lvlup.save
-      redirect_to profile_path(current_user)
+      redirect_to profile_edit_path(current_user)
     else
       render 'new'
     end
