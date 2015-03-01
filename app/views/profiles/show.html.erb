@@ -2,11 +2,13 @@
   <div class="col-lg-12">
     <h2>List of skills</h2>
     <ul>
-      <li>
-        <%= link_to 'skill title here', skills_show_path %>
-        <span class="label label-default">80</span>
-        <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-xs' %>
-      </li>
+      <% @profile.skills.each do |skill| %>
+        <li>
+          <%= link_to skill.title, skills_show_path(skill) %>
+          <span class="label label-default">80</span>
+          <%= link_to 'lvlup', lvlups_new_path, class: 'btn btn-default btn-xs' %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>
