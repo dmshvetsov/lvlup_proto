@@ -1,7 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
-    <% unless current_user %>
-      <%= link_to t('facebook_login'), '/auth/facebook', id: 'sign_in', class: 'btn btn-default btn-lg' %>
-    <% end %>
+    <div class="jumbotron">
+      <p>
+        <%= t('info') %>
+      </p>
+      <p>
+        <%= link_to t('facebook_login'), '/auth/facebook', id: 'sign_in', class: 'btn btn-primary btn-lg' %>
+      </p>
+    </div>
   </div>
 </div>

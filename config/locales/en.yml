@@ -27,3 +27,6 @@ en:
   skillsnew: Add new skill
   lvlupsnew: Lvlup
   'high_voltage/pagesshow': About
+  source_code_link: 'https://github.com/shvetsovdm/lvlup_proto'
+  disclaimer: 'This is simple demonstration of general idea of the lvlup web application. There is a lots of bad constructed methods and design decisions, no a web design (basic bootstrap theme) and a lots of TODOs.'
+  info: "'LvlUp' it's a web application that allow you to add skills to an profile associated with Facebook and level up your skills with description what makes your skill to grow up. Share your skills with friends and track you progress or just have fun by creating a fancy profile. I have some ideas how make this idea more fun and interesting, if you like idea or you have some thoughts email me without any hesitation."
