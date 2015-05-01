@@ -25,6 +25,9 @@ gem 'omniauth-facebook', '2.0.0'
 # Static pages
 gem 'high_voltage', '2.2.1'
 
+# TMP
+gem 'pg_search'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
